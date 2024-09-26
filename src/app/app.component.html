@@ -1,0 +1,20 @@
+<ion-app>
+
+  <ion-menu side="start" menuId="main-menu" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menú de Navegación</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item (click)="navigateTo('/home')">Menu Principal</ion-item>
+        <ion-item (click)="navigateTo('/devices')">Dispositivos</ion-item>
+        <ion-item button color="danger" (click)="logOut()">Cerrar Sesión</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>

@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon name="arrow-back" (click)="goBack()" size="large"></ion-icon>
+    </ion-buttons>
+    <ion-title>Nuevo Dispositivo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Introduce los detalles del Dispositivo a agregar</h2>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="newDevice.name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Tipo Dispositivo</ion-label>
+    <ion-input [(ngModel)]="newDevice.type"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Estado</ion-label>
+    <ion-select [(ngModel)]="newDevice.status">
+      <ion-select-option value="Online">Online</ion-select-option>
+      <ion-select-option value="Offline">Apagado</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button expand="full" (click)="addDevice()">Añadir</ion-button>
+</ion-content>
